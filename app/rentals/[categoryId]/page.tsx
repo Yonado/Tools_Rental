@@ -21,7 +21,7 @@ function CategoryPage({
     return (
 
 
-        <div className="bg-white flex flex-col max-w-[1200px] mx-auto items-center">
+        <div className="bg-white flex flex-col max-w-[1200px] mx-auto items-center text-black">
             <div className="breadcrumbs mt-4 ml-4 md:ml-0 font-light self-start">
                 <span className=''><Link href="/rentals">Rentals</Link> / </span>
                 <span>{`${params.categoryId[0].toUpperCase() + params.categoryId.substring(1)}`}</span>

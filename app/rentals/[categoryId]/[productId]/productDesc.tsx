@@ -7,7 +7,7 @@ const ProductDesc = ({ title, description, rating, stock }: any) => {
     const [toggleTab, setToggleTab] = useState(1)
 
     return (
-        <div><div>
+        <div className="text-black">
             <ul className="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0 mb-4" id="tabs-tabFill"
                 role="tablist">
                 <li className="nav-item flex-auto text-center" role="presentation">
@@ -76,7 +76,7 @@ focus:border-transparent
                     Units in stock: {stock}
                 </div>
             </div>
-        </div></div>
+        </div>
     )
 }
 
