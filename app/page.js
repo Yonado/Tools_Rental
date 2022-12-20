@@ -62,7 +62,7 @@ function Home() {
 
             </div>
             <div className="">
-                <div id="topOfPage" className='text-center mt-12 text-2xl tracking-wide font-semibold'>Which tool do you need?</div>
+                <div id="topOfPage" className='text-center text-black mt-12 text-2xl tracking-wide font-semibold'>Which tool do you need?</div>
                 {/* <div className="swiper-list">
                     <Swiper2 />
                 </div> */}

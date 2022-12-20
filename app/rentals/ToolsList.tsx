@@ -17,7 +17,7 @@ export default function ToolsList() {
         <>
             <div className="sticky text-center top-[50px] inline-flex flex-row-reverse">
                 <div className="md:hidden ml-2 w-[50px] text-xs text-center inline font-light border-2 rounded">
-                    <a href="#topOfPage"><button className="object-contain text-center">Back to top</button></a>
+                    <a href="#topOfPage"><button className="text-black object-contain text-center">Back to top</button></a>
                 </div>
             </div>
             <div className=" flex flex-row gap-4 max-w-[80%] mx-auto w-full flex-wrap justify-center items-center">
