@@ -5,7 +5,7 @@ import React, { use, useState } from 'react'
 import { isTemplateSpan } from 'typescript';
 
 async function getCategories() {
-    return await (await fetch("https://dummyjson.com/products/categories", { cache: "no-store" })).json();
+    return await (await fetch("https://dummyjson.com/products/categories", { cache: "default" })).json();
 }
 
 const dataPromise = getCategories();
@@ -14,11 +14,11 @@ const dataPromise = getCategories();
 
 const Navbar = () => {
     const [value, setValue] = useState('')
-    const onChange = (event) => {
+    const onChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
         setValue(event.target.value);
     }
 
-    const onSearch = (searchTerm) => {
+    const onSearch = (searchTerm: React.SetStateAction<string>) => {
         setValue(searchTerm);
     }
 
@@ -74,14 +74,14 @@ const Navbar = () => {
             </div>
             <div className='flex-wrap pl-7 pb-5 pt-5 bg-[#706FC2] flex flex-row-reverse justify-center md:justify-between'>
 
-                <div className='search-container flex flex-row mx-5'>
+                <div className='relative search-container flex flex-row mx-5'>
                     <div className='xl:w-96  md:block'>
                         <div className="inner-search text-black input-group relative flex  items-stretch px-2">
                             <input placeholder="Search a tool..." className="form-control px-2 relative min-w-0 block py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-l transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" type="search" value={value} onChange={onChange} />
                             <button className="btn inline-block px-6 py-2 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded-r border-l-0 hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" onClick={() => onSearch(value)}>Search</button>
                         </div>
-                        <div className='empty:hidden absolute search-dropdown flex flex-col bg-white text-black  text-base ml-2 rounded border-2 border-solid border-gray-300 top-[65px]'>
-                            {categories.filter(item => {
+                        <div className='empty:hidden top-10 absolute search-dropdown flex flex-col bg-white text-black  text-base ml-2 rounded border-2 border-solid border-gray-300'>
+                            {categories.filter((item: string) => {
                                 const searchTerm = value.toLowerCase()
                                 const cat = item.toLowerCase()
                                 return searchTerm && item.startsWith(searchTerm) && cat !== searchTerm
@@ -102,7 +102,7 @@ const Navbar = () => {
                                     <div className=" flex flex-row gap-4 max-w-[80%] mx-auto w-full flex-wrap justify-center items-center">
 
                                         {
-                                            categories?.filter(name => name.includes('t'))
+                                            categories?.filter((name: string | string[]) => name.includes('t'))
                                                 .map((category: string) => {
                                                     return (
                                                         <Link key={category} href={`/rentals/${category}`}>
@@ -132,7 +132,7 @@ const Navbar = () => {
                                     <div className=" flex flex-row gap-4 max-w-[80%] mx-auto w-full flex-wrap justify-center items-center">
 
                                         {
-                                            categories?.filter(name => name.includes('r'))
+                                            categories?.filter((name: string | string[]) => name.includes('r'))
                                                 .map((category: string) => {
                                                     return (
                                                         <Link key={category} href={`/rentals/${category}`}>
@@ -162,7 +162,7 @@ const Navbar = () => {
                                     <div className="flex flex-row gap-4 max-w-[80%] mx-auto w-full flex-wrap justify-center items-center">
 
                                         {
-                                            categories?.filter(name => name.includes('s'))
+                                            categories?.filter((name: string | string[]) => name.includes('s'))
                                                 .map((category: string) => {
                                                     return (
                                                         <Link key={category} href={`/rentals/${category}`}>

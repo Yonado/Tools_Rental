@@ -33,9 +33,9 @@ function CategoryPage({
             <div className="font-semibold text-5xl mt-4">{`Rent ${params.categoryId}`}</div>
             <div className="flex flex-row gap-4 m-16 flex-wrap justify-center items-center">
 
-                {catProducts.map((product: { id: React.Key | null | undefined; title: string; images: (string | undefined)[]; brand: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }): JSX.Element => {
+                {catProducts.map((product: any) => {
                     return (
-                        <Link product={product} key={product.id} href={`/rentals/${params.categoryId}/${product.title}`}>
+                        <Link key={product.id} href={`/rentals/${params.categoryId}/${product.title}`}>
                             <div className="border-4 border-white box-border relative hover:border-4 hover:border-[#706FC2] rounded flex items-center justify-center pb-4 md:w-[240px] h-[450px] w-[180px] bg-[url('https://media.istockphoto.com/id/961710268/photo/white-cement-marble-texture-with-natural-pattern-for-background.jpg?s=612x612&w=0&k=20&c=nO7N308EMYmyF96fnd34jhaI96WiH_Aem3Q1N5OUMTk=')]">
                                 <div className=" flex flex-col justify-center items-center mt-4">
                                     <div className="w-[160px] h-[160px] border-4 bg-white">

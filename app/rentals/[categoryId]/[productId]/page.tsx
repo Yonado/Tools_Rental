@@ -18,7 +18,7 @@ function ProductPage({
     const dataUsing = getProducts();
 
     const tools = use(dataUsing);
-    const catProduct = tools?.products?.filter((product) => product.title === params.productId.replaceAll("%20", ' '))
+    const catProduct = tools?.products?.filter((product: { title: string; }) => product.title === params.productId.replaceAll("%20", ' '))
     const [{ id, title, description, price, discountPercentage, rating, stock, brand, category, thumbnail, images }] = catProduct
     console.log(`The title is ${title}`)
 

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 
-const ProductDesc = ({ title, description, rating, stock }) => {
+const ProductDesc = ({ title, description, rating, stock }: any) => {
 
     const [toggleTab, setToggleTab] = useState(1)
 
