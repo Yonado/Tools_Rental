@@ -30,7 +30,7 @@ function CategoryPage({
                 <img className="mt-4 w-[94px] h-[150px]" src="https://power-tools.co.il/_next/image?url=%2Fimages%2FiconsAndLogos%2Flogos%2F%D7%94%D7%A9%D7%9B%D7%A8%D7%AA-%D7%9B%D7%9C%D7%99-%D7%A2%D7%91%D7%95%D7%93%D7%94-%D7%A6%D7%99%D7%95%D7%93-%D7%9B%D7%9C%D7%99%D7%9D-%D7%9B%D7%9C%D7%99-%D7%91%D7%A0%D7%99%D7%99%D7%9F-%D7%9C%D7%94%D7%A9%D7%9B%D7%A8%D7%94.svg&w=128&q=75" alt="" />
 
             </div>
-            <div className="font-semibold text-5xl mt-4">{`Rent ${params.categoryId}`}</div>
+            <div className="font-semibold text-5xl mt-4 text-center">{`Rent ${params.categoryId}`}</div>
             <div className="flex flex-row gap-4 m-16 flex-wrap justify-center items-center">
 
                 {catProducts.map((product: any) => {
