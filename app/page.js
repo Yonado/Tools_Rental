@@ -16,7 +16,7 @@ function Home() {
         <div>
 
             <div>
-                <div className="container mt-[30px] flex flex-col">
+                <div className="bg-white container mt-[30px] flex flex-col">
                     <div className="flex items-center justify-center flex-col-reverse md:flex-row ">
                         <div className='right flex flex-col gap-2 w-3/4 md:w-1/2'>
                             <div className='font-extrabold text-4xl text-gray-700'>All the tools you need</div>

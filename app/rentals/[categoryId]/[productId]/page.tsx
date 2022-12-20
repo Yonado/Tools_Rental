@@ -25,7 +25,7 @@ function ProductPage({
 
 
     return (
-        <div className='max-w-[90%] mx-auto mb-10'>
+        <div className='bg-white max-w-[90%] mx-auto mb-10'>
             <div className="breadcrumbs mt-4 ml-4 md:ml-0 font-light self-start">
                 <span className=''><Link href="/rentals/">Rentals/</Link><Link href={`/rentals/${category}`}>{params.categoryId}</Link>/</span>
                 <span>{`${params.productId[0].toUpperCase() + params.productId.substring(1).replaceAll("%20", ' ')}`}</span>
