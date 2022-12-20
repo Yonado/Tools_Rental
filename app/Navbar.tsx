@@ -195,7 +195,6 @@ const Navbar = () => {
                             <div className="m-[20px] mx-auto">
                                 <div className="flex flex-col gap-6 text-white m-6">
                                     <Link href="/">Home page</Link>
-                                    <Link></Link>
                                     <Link href="/">About</Link>
                                     <Link href="/">Tools for rent</Link>
                                     <Link href="/">Contact</Link>
